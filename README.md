@@ -27,7 +27,11 @@ Be sure to add the rspec-rails gem to your Gemfile and then create a dummy test 
 
 ```bash
 $ bundle exec rake test_app
-$ bundle exec rspec spec
+$ cd spec/dummy
+$ bundle exec rake railties:install:migrations
+$ bundle exec rake db:test:prepare
+$ cd ../..
+$ bundle exec spec
 ```
 
 Copyright (c) 2012 [John Hwang], released under the New BSD License

@@ -1,0 +1,8 @@
+en:
+  role_rule:
+    choose_roles: "Choose Roles"
+
+  promotion_rule_types:
+    role:
+      name: "Role"
+      description: "Available only to the specified roles"

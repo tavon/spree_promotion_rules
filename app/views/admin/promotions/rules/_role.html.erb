@@ -1,0 +1,9 @@
+<%= javascript_include_tag 'jquery.roles.js' %>
+
+<p class="field">
+  <label>
+    <%= t('role_rule.choose_roles') %><br />
+    <% role_names_hash = promotion_rule.roles.inject([]){|memo,item| memo << { :id => item.id, :name => item.name }; memo} %>
+    <input type="text" name="<%= param_prefix %>[role_ids_string]" value="<%= promotion_rule.role_ids_string %>" class="tokeninput roles" data-pre='<%= role_names_hash.to_json %>' />
+  </label>
+</p>

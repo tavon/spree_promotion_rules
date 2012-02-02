@@ -1,0 +1,2 @@
+rvm ruby-1.9.2-p290
+rvm gemset use spree_promotion_rules
