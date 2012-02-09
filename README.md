@@ -20,6 +20,14 @@ rails g spree_promotion_rules:install
 rake db:migrate
 ```
 
+Add an initializer to your application.rb file to inject your promotions rules
+
+```ruby
+initializer "spree.promo.register.promotions.rules" do |app|
+  app.config.spree.promotions.rules += [Promotion::Rules::Role]
+end
+```
+
 Testing
 -------
 
